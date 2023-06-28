@@ -13,12 +13,11 @@ output "private_dns" {
     value   =   aws_instance.app.private_dns
 }
 
-resource "aws_security_group" "sumanth-123" {
+resource "aws_security_group" "allow_ssh" {
   name        = "sumanth-123"
   description = "Allow SSH inbound traffic"
 
     ingress {
-     
       description      = Allow SSH From Public
       from_port        = 22
       to_port          = 22
