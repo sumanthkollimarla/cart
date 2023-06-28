@@ -1,7 +1,7 @@
 resource "aws_instance" "app" {
   ami                        = "ami-0c1d144c8fdd8d690"
   instance_type              = "t2.micro"
-   vpc_security_group_ids     = [aws_security_group.sumanth-123.id]
+   vpc_security_group_ids     = [aws_security_group.sumanth-1.id]
 
 
   tags = {
@@ -13,8 +13,8 @@ output "private_dns" {
     value   =   aws_instance.app.private_dns
 }
 
-resource "aws_security_group" "sumanth-123" {
-  name        = "sumanth-123"
+resource "aws_security_group" "sumanth-1" {
+  name        = "sumanth-1"
   description = "Allow SSH inbound traffic"
 
     ingress {
@@ -51,6 +51,6 @@ resource "aws_security_group" "sumanth-123" {
   }
 
   tags = {
-    Name = "sumanth-123"
+    Name = "sumanth-1"
   }
 }
