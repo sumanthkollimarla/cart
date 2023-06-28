@@ -13,7 +13,7 @@ output "private_dns" {
     value   =   aws_instance.app.private_dns
 }
 
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "sumanth-123" {
   name        = "sumanth-123"
   description = "Allow SSH inbound traffic"
 
@@ -51,6 +51,6 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_SSH"
+    Name = "sumanth-123"
   }
 }
