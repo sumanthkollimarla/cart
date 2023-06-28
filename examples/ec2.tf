@@ -18,6 +18,7 @@ resource "aws_security_group" "sumanth-123" {
   description = "Allow SSH inbound traffic"
 
     ingress {
+     
       description      = Allow SSH From Public
       from_port        = 22
       to_port          = 22
