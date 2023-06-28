@@ -18,7 +18,7 @@ resource "aws_security_group" "sumanth-123" {
   description = "Allow SSH inbound traffic"
 
     ingress {
-      description      = Allow SSH From Public
+      description      = "Allow SSH From Public"
       from_port        = 22
       to_port          = 22
       protocol         = "tcp"
@@ -26,7 +26,7 @@ resource "aws_security_group" "sumanth-123" {
     }
   
     ingress {
-      description      = Allow HTTP From Public
+      description      = "Allow HTTP From Public"
       from_port        = 80
       to_port          = 80
       protocol         = "tcp"
@@ -34,7 +34,7 @@ resource "aws_security_group" "sumanth-123" {
     }
 
     ingress {
-      description      = Allow HTTPS From Public
+      description      = "Allow HTTPS From Public"
       from_port        = 443
       to_port          = 443
       protocol         = "tcp"
