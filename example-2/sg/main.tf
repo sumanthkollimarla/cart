@@ -3,7 +3,7 @@ resource "aws_security_group" "sumanth-1" {
   description = "Allow SSH inbound traffic"
 
     ingress {
-      description      = "Allow SSH From Public"
+      description      = "SSH From VPC"
       from_port        = 22
       to_port          = 22
       protocol         = "tcp"
@@ -11,21 +11,12 @@ resource "aws_security_group" "sumanth-1" {
     }
   
     ingress {
-      description      = "Allow HTTP From Public"
+      description      = "HTTP From Public"
       from_port        = 80
       to_port          = 80
       protocol         = "tcp"
       cidr_blocks      = ["0.0.0.0/0"]
     }
-
-    ingress {
-      description      = "Allow HTTPS From Public"
-      from_port        = 443
-      to_port          = 443
-      protocol         = "tcp"
-      cidr_blocks      = ["0.0.0.0/0"]
-    }
-
 
   egress {
     from_port        = 0
@@ -38,4 +29,8 @@ resource "aws_security_group" "sumanth-1" {
   tags = {
     Name = "sumanth-1"
   }
+}
+
+output "sgid" {
+    value  =  aws_security_group.sumanth-1.id
 }
