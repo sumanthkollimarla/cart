@@ -8,3 +8,10 @@ resource "aws_instance" "app" {
     Name = "MyFirstTerraformin"
   }
 }
+
+
+variable "sg" {}
+
+output "public_ip"{
+    value = aws_instance.app.public_ip
+}
