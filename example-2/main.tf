@@ -1,6 +1,6 @@
 module "ec2" {
     source = "./ec2"
-  
+    SG     = module.sg.sgid
 }
 
 module "sg" {
