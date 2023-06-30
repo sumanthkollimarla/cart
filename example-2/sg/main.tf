@@ -1,5 +1,5 @@
-resource "aws_security_group" "sumanth-1" {
-  name        = "sumanth-1"
+resource "aws_security_group" "sumanth-12" {
+  name        = "sumanth-12"
   description = "Allow SSH inbound traffic"
 
     ingress {
@@ -27,10 +27,10 @@ resource "aws_security_group" "sumanth-1" {
   }
 
   tags = {
-    Name = "sumanth-1"
+    Name = "sumanth-12"
   }
 }
 
 output "sgid" {
-    value  =  aws_security_group.sumanth-1.id
+    value  =  aws_security_group.sumanth-12.id
 }
